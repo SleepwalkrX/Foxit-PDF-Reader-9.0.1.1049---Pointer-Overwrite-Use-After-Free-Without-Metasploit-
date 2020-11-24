@@ -9,14 +9,14 @@ Based on https://www.exploit-db.com/exploits/45269
   - impacket-smbserver sharename /path/to/payload
 
 3. Generate shellcode with the following script
-  ruby generate_shellcode.rb
+ - ruby generate_shellcode.rb
 
 4. Copy the output of the script and put it inside exploit.pdf, on the reclaim() function, where specified
 
 5. Transfer exploit.pdf to victim
 
 6. Open a listener on the attacking machine, in my case:
-  nc -lnvp 443
+- nc -lnvp 443
 
 7. Open exploit.pdf with the vulnerable version of foxit reader on the target
 
